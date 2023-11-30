@@ -1,0 +1,24 @@
+@import "./breakpoints.scss";
+@import "./variables.scss";
+
+
+.title-list {
+  margin: 40px 100px;
+  color: $blue;
+
+  @include sm {
+    margin: 40px 50px;
+  }
+}
+
+.list {
+  padding: 0 100px 120px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+
+  @include xl {
+    padding: 0 20px 120px;
+  }
+}

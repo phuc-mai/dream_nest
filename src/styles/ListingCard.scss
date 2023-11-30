@@ -1,0 +1,91 @@
+@import "./variables.scss";
+
+.listing-card {
+  position: relative;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+
+  &:hover {
+    @include shadow;
+  }
+
+  .slider-container {
+    width: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 10px;
+
+    .slider {
+      display: flex;
+      transition: transform 0.5s ease;
+
+      .slide {
+        position: relative;
+        flex: 0 0 100%;
+        width: 100%;
+        height: 270px;
+        display: flex;
+        align-items: center;
+
+        img {
+          width: 100%;
+          height: 100%;
+          filter: brightness(85%);
+        }
+
+        .prev-button,
+        .next-button {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          padding: 6px;
+          border-radius: 50%;
+          border: none;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: rgba(255, 255, 255, 0.7);
+          z-index: 9999;
+
+          &:hover {
+            background-color: white;
+          }
+        }
+
+        .prev-button {
+          left: 10px;
+        }
+
+        .next-button {
+          right: 10px;
+        }
+      }
+    }
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  span {
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+  .favorite {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 999;
+    background: none;
+  }
+}
